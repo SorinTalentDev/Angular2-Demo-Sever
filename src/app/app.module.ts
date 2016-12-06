@@ -11,9 +11,6 @@ import { MainFormComponent } from './1/lander/main-form/main-form.component';
 import { Cs1Component } from './1/lander/cs-1/cs-1.component';
 import { Cs2Component } from './1/lander/cs-2/cs-2.component';
 
-// Footer
-import { FooterComponent } from './1/footer/footer.component';
-
 // Checkout Page
 import { CheckoutComponent } from './1/checkout/checkout.component';
 import { CheckHeaderComponent } from './1/checkout/check-header/check-header.component';
@@ -26,6 +23,12 @@ import { ThankyouComponent } from './1/thankyou/thankyou.component';
 
 // Terms Page
 import { TermsComponent } from './1/terms/terms.component';
+
+// Footer
+import { FooterComponent } from './1/footer/footer.component';
+
+// Modal
+import { ModalComponent } from './1/footer/modal/modal.component';
 
 import { routing } from './app.routing';
 import { GlobalDirective } from './global.directive';
@@ -47,7 +50,8 @@ import { GlobalDirective } from './global.directive';
     ThankMainComponent,
     CheckHeaderComponent,
     GlobalDirective,
-    TermsComponent
+    TermsComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

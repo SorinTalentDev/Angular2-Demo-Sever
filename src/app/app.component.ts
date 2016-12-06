@@ -13,7 +13,5 @@ import { GlobalDirective } from './global.directive';
 })
 
 export class AppComponent {
-  Title = 'This should be green!';
-  subTitle = 'This should be red';
   public constructor(private titleService: Title ) {}
 }

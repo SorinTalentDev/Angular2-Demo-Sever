@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-import { Component, OnInit } from '@angular/core';
-import { GlobalDirective } from '../../global.directive';
-=======
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { GlobalDirective } from '../../global.directive';
 import { ModalComponent } from './modal/modal.component';
->>>>>>> john
 
 @Component({
   selector: 'app-footer',
@@ -15,14 +11,11 @@ import { ModalComponent } from './modal/modal.component';
 
 export class FooterComponent implements OnInit {
 
-<<<<<<< HEAD
+
   constructor (public echos: GlobalDirective) {}
-=======
+
   @ViewChild(ModalComponent)
   public readonly modal: ModalComponent;
-
-  constructor() { }
->>>>>>> john
 
   ngOnInit() {
   }

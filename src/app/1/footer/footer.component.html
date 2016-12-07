@@ -9,10 +9,10 @@
   </div>
 
   <p class="footer-links">
-    <a class="footer-link" (click)="modal.show()">Terms and Conditions</a> &bull;
-    <a class="footer-link" (click)="modal.show()">Privacy Policy</a> &bull;
-    <a class="footer-link" (click)="modal.show()">Contact Us</a> &bull;
-    <a class="footer-link" (click)="modal.show()">Ingredients</a>
+    <a class="footer-link" (click)="modal.show('terms')">Terms and Conditions</a> &bull;
+    <a class="footer-link" (click)="modal.show('privacy')">Privacy Policy</a> &bull;
+    <a class="footer-link" (click)="modal.show('contact')">Contact Us</a> &bull;
+    <a class="footer-link" (click)="modal.show('ingredients')">Ingredients</a>
   </p>
 
   <p class="footer-company-name"><span [innerText]="echos.productName"></span> &copy; 2016</p>
@@ -20,7 +20,8 @@
   <p class="footer-company-name">This product is not for use by or sale to persons under the age of 18. This product should be used only as directed on the label. It should not be used if you are pregnant or nursing. Consult with a physician before use if you have a serious medical
     condition or use prescription medications. A Doctor's advice should be sought before using this and any supplemental dietary product. All trademarks and copyrights are the property of their respective owners and are not affiliated with nor do they
     endorse <span [innerText]="echos.productName"></span>. These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Individual weight loss results will vary. By using this site
-    you agree to follow the Privacy Policy and all Terms & Conditions printed on this site. Void Where Prohibited By Law.</p>
+    you agree to follow the Privacy Policy and all Terms & Conditions printed on this site. Void Where Prohibited By Law.
+  </p>
 
   <app-modal></app-modal>
 </footer>

@@ -2,10 +2,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1>{{ header }}</h1>
+        <h1>{{ headerString }}</h1>
       </div>
       <div class="modal-body">
-        <app-terms></app-terms>
+        <app-terms [hidden]="hideTerms"></app-terms>
+        <app-privacy [hidden]="hidePrivacy"></app-privacy>
+        <app-contact [hidden]="hideContact"></app-contact>
+        <app-ingredients [hidden]="hideIngredients"></app-ingredients>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" (click)="this.hide()">Close</button>

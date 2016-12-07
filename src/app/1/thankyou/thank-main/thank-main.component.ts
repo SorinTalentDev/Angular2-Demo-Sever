@@ -8,7 +8,7 @@ import { GlobalDirective } from '../../../global.directive';
 })
 export class ThankMainComponent implements OnInit {
 
-  constructor() { }
+  constructor (public echos: GlobalDirective) {}
 
   ngOnInit() {
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { GlobalDirective } from '../../global.directive';
 import { ModalComponent } from './modal/modal.component';
+import { TermsComponent } from '../terms/terms.component';
 
 @Component({
   selector: 'app-footer',

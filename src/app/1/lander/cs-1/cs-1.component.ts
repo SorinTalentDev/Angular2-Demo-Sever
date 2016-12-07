@@ -7,7 +7,7 @@ import { GlobalDirective } from '../../../global.directive';
   styleUrls: ['./cs-1.component.scss']
 })
 export class Cs1Component implements OnInit {
-  
+
   constructor (public echos: GlobalDirective) {}
 
   ngOnInit() {

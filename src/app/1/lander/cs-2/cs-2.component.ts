@@ -7,7 +7,7 @@ import { GlobalDirective } from '../../../global.directive';
 })
 export class Cs2Component implements OnInit {
 
-  constructor() { }
+  constructor (public echos: GlobalDirective) {}
 
   ngOnInit() {
   }

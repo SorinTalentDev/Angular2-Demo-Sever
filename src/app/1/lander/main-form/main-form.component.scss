@@ -1,25 +1,5 @@
-h3 {
-  color: #b60000;
-  margin: 1em 0px;
-  font-size: 2em;
-}
-
 .checkbox input[type=checkbox] {
   margin-right: 1em;
   margin-left: 0;
   position: relative;
-}
-
-button.btn {
-  background-color: #b60000;
-  color: #fff;
-  padding: 1em 4em;
-  font-size: 2em;
-  transition: .5s;
-
-  &:hover {
-    background-color: #830404;
-    transition: .5s;
-    color: #fff;
-  }
 }

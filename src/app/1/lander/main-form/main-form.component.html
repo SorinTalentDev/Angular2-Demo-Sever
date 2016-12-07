@@ -72,8 +72,7 @@
     <input type="checkbox" type="checkbox" name="confirm" required oninvalid="this.setCustomValidity('Please Agree to our terms and conditions')" onchange="this.setCustomValidity('')">By placing an order with us, you agree to our full <a class="footer-link"
         href="javascript:void(0);" onclick="javascript:openNewWindow('terms.php', 'modal');">Terms and Conditions</a> and the enrollment our monthly auto-ship program, where you will immediately be billed the shipping and handling amount of <span [innerText]="echos.price"></span>    . We will then immediately ship you your first bottle of <span [innerText]="echos.corpName"></span>. In 18 days ( approximately 4 days for shipping and 14 days to try the product ), your credit card will be automatically charged the full retail price
     of <span [innerText]="echos.price"></span> starting 45 days after you trial has been expired you will be shipped a recurring supply of <span [innerText]="echos.productName"></span> every 30 days and will be charged <span [innerText]="echos.price"></span>    for the total amount of <span [innerText]="echos.price"></span> for each recurring product that is shipped to you until you cancel. If our product is not right for you, simply call <span [innerText]="echos.phone"></span> or contact us via email
-    <span
-        [innerText]="echos.email"></span> to cancel your membership and owe nothing more.
+    <span [innerText]="echos.email"></span> to cancel your membership and owe nothing more.
   </div>
   <div class="btn-container">
     <button class="btn" id='kformSubmit' type="submit" routerLink="/checkout" routerLinkActive="active">Order Now</button>

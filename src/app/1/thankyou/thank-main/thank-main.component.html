@@ -5,7 +5,7 @@
       <div class="col-md-12">
         <strong>Thank you for your purchase!</strong>
         <p>
-          We hope you enjoy the benefits of {{ productName }}<br /> Your order is scheduled to arrive by <span><script type="text/javascript">getDate(5)</script></span>
+          We hope you enjoy the benefits of <span [innerText]="echos.productName"></span><br /> Your order is scheduled to arrive by <span><script type="text/javascript">getDate(5)</script></span>
         </p>
       </div>
     </div>

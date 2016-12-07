@@ -11,13 +11,13 @@
 
   <div id="hiddenbilling">
     <div class="form-group">
-      <input type="text" id="billaddress" name="billaddress" class="form-control" placeholder="Address" oninvalid="this.setCustomValidity('Please enter your address')" onchange="this.setCustomValidity('')">
+      <input type="text" id="billaddress" name="billaddress" class="form-control" placeholder="Address" oninvalid="this.setCustomValidity('Please enter your address')" onchange="this.setCustomValidity('')" ngModel>
     </div>
     <div class="form-group">
-      <input type="text" id="billcity" class="form-control" name="billcity" placeholder="City">
+      <input type="text" id="billcity" class="form-control" name="billcity" placeholder="City" ngModel>
     </div>
     <div class="form-group">
-      <select name="billstate" id="billstate" class="form-control" oninvalid="this.setCustomValidity('Please select your State')" onchange="this.setCustomValidity('')">
+      <select name="billstate" id="billstate" class="form-control" oninvalid="this.setCustomValidity('Please select your State')" onchange="this.setCustomValidity('')" ngModel>
               <option value="">Select State</option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -73,13 +73,13 @@
             </select>
     </div>
     <div class="form-group">
-      <select name="billcountry" class="form-control" id="billcountry" oninvalid="this.setCustomValidity('Sorry The product is not availiable in your country')" onchange="this.setCustomValidity('')">
+      <select name="billcountry" class="form-control" id="billcountry" oninvalid="this.setCustomValidity('Sorry The product is not availiable in your country')" onchange="this.setCustomValidity('')" ngModel>
               <option value="">Select Country</option>
               <option value="US">United States</option>
             </select>
     </div>
     <div class="form-group">
-      <input type="num" id="billzip" class="form-control" name="billzip" placeholder="Zip Code" maxlength="5" minlength="5" oninvalid="this.setCustomValidity('Please enter your ZIP code')" onchange="this.setCustomValidity('')">
+      <input type="num" id="billzip" class="form-control" name="billzip" placeholder="Zip Code" maxlength="5" minlength="5" oninvalid="this.setCustomValidity('Please enter your ZIP code')" onchange="this.setCustomValidity('')" ngModel>
     </div>
 
 
@@ -107,12 +107,12 @@
   -->
   <label>Credit Card:</label>
   <div class="form-group">
-    <input type="num" class="form-control ignore" id="ccnumber" name="ccnumber" placeholder="Card Number" required maxlength="16" minlength="15" title="Please enter a valid credit card">
+    <input type="num" class="form-control ignore" id="ccnumber" name="ccnumber" placeholder="Card Number" required maxlength="16" minlength="15" title="Please enter a valid credit card" ngModel>
   </div>
 
   <label>Expiration Date:</label>
   <div class="form-group">
-    <select name="cardExpMonth" class="form-control" id="cardExpMonth">
+    <select name="cardExpMonth" class="form-control" id="cardExpMonth" ngModel>
       <option value="1" selected>1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -129,7 +129,7 @@
     <span class="glyphicon form-control-feedback" id="cardExpMonth1"></span>
   </div>
   <div class="form-group">
-    <select name="cardExpYear" class="form-control" id="cardExpYear">
+    <select name="cardExpYear" class="form-control" id="cardExpYear" ngModel>
       <option value="2016" selected>2016</option>
       <option value="2017">2017</option>
       <option value="2018">2018</option>
@@ -160,7 +160,7 @@
     </div>
   </div>
   <div class="btn-container">
-    <button id="submit-btn" type="submit" name="sub-btn" class="btn button" routerLink="/thankyou" routerLinkActive="active">Claim My Trial</button>
+    <button id="submit-btn" type="submit" name="sub-btn" class="btn button" routerLink="/thankyou" [disabled]="!f2.valid">Claim My Trial</button>
   </div>
 
 </form>

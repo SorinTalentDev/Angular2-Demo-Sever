@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ThankMainComponent } from './thank-main/thank-main.component';
+import { GlobalDirective } from '../../global.directive';
 
 @Component({
   selector: 'app-thankyou',
@@ -8,7 +9,7 @@ import { ThankMainComponent } from './thank-main/thank-main.component';
 })
 export class ThankyouComponent implements OnInit {
 
-  constructor() { }
+  constructor (public echos: GlobalDirective) {}
 
   ngOnInit() {
   }

@@ -9,11 +9,8 @@ import { GlobalDirective } from './global.directive';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
-
 })
 
 export class AppComponent {
-  Title = 'This should be green!';
-  subTitle = 'This should be red';
   public constructor(private titleService: Title ) {}
 }

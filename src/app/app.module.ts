@@ -21,8 +21,11 @@ import { CheckMainComponent } from './1/checkout/check-main/check-main.component
 import { ThankMainComponent } from './1/thankyou/thank-main/thank-main.component';
 import { ThankyouComponent } from './1/thankyou/thankyou.component';
 
-// Terms Page
-import { TermsComponent } from './1/terms/terms.component';
+// Terms, Privacy, Contact, and Ingredients Pages
+import { TermsComponent } from './1/footer/modal/terms/terms.component';
+import { PrivacyComponent } from './1/footer/modal/privacy/privacy.component';
+import { ContactComponent } from './1/footer/modal/contact/contact.component';
+import { IngredientsComponent } from './1/footer/modal/ingredients/ingredients.component';
 
 // Footer
 import { FooterComponent } from './1/footer/footer.component';
@@ -51,7 +54,10 @@ import { GlobalDirective } from './global.directive';
     CheckHeaderComponent,
     GlobalDirective,
     TermsComponent,
-    ModalComponent
+    ModalComponent,
+    PrivacyComponent,
+    ContactComponent,
+    IngredientsComponent
   ],
   imports: [
     BrowserModule,

@@ -9,14 +9,4 @@ import { ModalComponent } from '../modal.component';
 export class TermsComponent {
 
   constructor() { }
-
-  public visible = false;
-
-  public show(): void {
-    this.visible = true;
-  }
-
-  public hide(): void {
-    setTimeout(() => this.visible = false, 300);
-  }
 }

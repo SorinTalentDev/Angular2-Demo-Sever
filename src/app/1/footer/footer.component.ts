@@ -20,9 +20,6 @@ export class FooterComponent implements OnInit {
   @ViewChild(ModalComponent)
   public readonly modal: ModalComponent;
 
-  @ViewChild(TermsComponent)
-  public readonly terms: TermsComponent;
-
   ngOnInit() {
   }
 

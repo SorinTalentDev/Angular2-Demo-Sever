@@ -1,5 +1,23 @@
+// form input prompt colors
+$error:  #b60000;  /* Red */
+$valid: #42A948; /* green */
+
 .checkbox input[type=checkbox] {
   margin-right: 1em;
   margin-left: 0;
   position: relative;
+}
+
+.ng-invalid {
+  border-left: 5px solid $error;
+
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid $valid;
+}
+
+form.ng-invalid {
+  border:none;
+  box-shadow:none;
 }

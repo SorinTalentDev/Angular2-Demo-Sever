@@ -1,6 +1,6 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
@@ -21,6 +21,10 @@ import { CheckMainComponent } from './1/checkout/check-main/check-main.component
 import { ThankMainComponent } from './1/thankyou/thank-main/thank-main.component';
 import { ThankyouComponent } from './1/thankyou/thankyou.component';
 
+
+// Terms Page
+
+
 // Terms, Privacy, Contact, and Ingredients Pages
 import { TermsComponent } from './1/footer/modal/terms/terms.component';
 import { PrivacyComponent } from './1/footer/modal/privacy/privacy.component';
@@ -33,8 +37,10 @@ import { FooterComponent } from './1/footer/footer.component';
 // Modal
 import { ModalComponent } from './1/footer/modal/modal.component';
 
+
 import { routing } from './app.routing';
 import { GlobalDirective } from './global.directive';
+
 
 
 @NgModule({
@@ -59,15 +65,15 @@ import { GlobalDirective } from './global.directive';
     ContactComponent,
     IngredientsComponent
   ],
+
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     routing
   ],
-  providers: [GlobalDirective, Title
-
-  ],
+  providers: [GlobalDirective, Title],
   bootstrap: [AppComponent]
 })
 export class AppModule {

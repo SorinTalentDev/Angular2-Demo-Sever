@@ -1,9 +1,9 @@
 <!-- Form start -->
-<form id="index-form" method="post" action="thankyou.php">
+<form id="index-form" #f2="ngForm" (ngSubmit)="onSubmit(f2.value)">
   <div class="checkout-form-image cards-image"><img class="form-cc" src="../../../../assets/images/cc.png" alt="Credit cards"></div>
 
   <div id="billshipcheck" class="billshipsame">
-    <input class="checkbox" type="checkbox" style="display:inline;" class="form-control" name="billship" checked>
+    <input class="checkbox" type="checkbox" style="display:inline;" id="billShipSame" class="form-control" name="billship" checked>
     <label for='billShipSame'>
           Billing Address same as Shipping
         </label>
@@ -11,13 +11,13 @@
 
   <div id="hiddenbilling">
     <div class="form-group">
-      <input type="text" id="billaddress" name="billaddress" class="form-control" placeholder="Address" oninvalid="this.setCustomValidity('Please enter your address')" onchange="this.setCustomValidity('')">
+      <input type="text" id="billaddress" name="billaddress" class="form-control" placeholder="Address" oninvalid="this.setCustomValidity('Please enter your address')" onchange="this.setCustomValidity('')" ngModel>
     </div>
     <div class="form-group">
-      <input type="text" id="billcity" class="form-control" name="billcity" placeholder="City">
+      <input type="text" id="billcity" class="form-control" name="billcity" placeholder="City" ngModel>
     </div>
     <div class="form-group">
-      <select name="billstate" id="billstate" class="form-control" oninvalid="this.setCustomValidity('Please select your State')" onchange="this.setCustomValidity('')">
+      <select name="billstate" id="billstate" class="form-control" oninvalid="this.setCustomValidity('Please select your State')" onchange="this.setCustomValidity('')" ngModel>
               <option value="">Select State</option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -73,13 +73,13 @@
             </select>
     </div>
     <div class="form-group">
-      <select name="billcountry" class="form-control" id="billcountry" oninvalid="this.setCustomValidity('Sorry The product is not availiable in your country')" onchange="this.setCustomValidity('')">
+      <select name="billcountry" class="form-control" id="billcountry" oninvalid="this.setCustomValidity('Sorry The product is not availiable in your country')" onchange="this.setCustomValidity('')" ngModel>
               <option value="">Select Country</option>
               <option value="US">United States</option>
             </select>
     </div>
     <div class="form-group">
-      <input type="num" id="billzip" class="form-control" name="billzip" placeholder="Zip Code" maxlength="5" minlength="5" oninvalid="this.setCustomValidity('Please enter your ZIP code')" onchange="this.setCustomValidity('')">
+      <input type="num" id="billzip" class="form-control" name="billzip" placeholder="Zip Code" maxlength="5" minlength="5" oninvalid="this.setCustomValidity('Please enter your ZIP code')" onchange="this.setCustomValidity('')" ngModel>
     </div>
 
 
@@ -107,12 +107,12 @@
   -->
   <label>Credit Card:</label>
   <div class="form-group">
-    <input type="num" class="form-control ignore" id="ccnumber" name="ccnumber" placeholder="Card Number" required maxlength="16" minlength="15" title="Please enter a valid credit card">
+    <input type="num" class="form-control ignore" id="ccnumber" name="ccnumber" placeholder="Card Number" required maxlength="16" minlength="15" title="Please enter a valid credit card" ngModel>
   </div>
 
   <label>Expiration Date:</label>
   <div class="form-group">
-    <select name="cardExpMonth" class="form-control" id="cardExpMonth">
+    <select name="cardExpMonth" class="form-control" id="cardExpMonth" ngModel>
       <option value="1" selected>1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -129,7 +129,7 @@
     <span class="glyphicon form-control-feedback" id="cardExpMonth1"></span>
   </div>
   <div class="form-group">
-    <select name="cardExpYear" class="form-control" id="cardExpYear">
+    <select name="cardExpYear" class="form-control" id="cardExpYear" ngModel>
       <option value="2016" selected>2016</option>
       <option value="2017">2017</option>
       <option value="2018">2018</option>
@@ -153,14 +153,14 @@
     <div class="tos">
       <input class="checkbox ignore" style="display:inline;" type="checkbox" name="confirm" required data-bv-feedbackicons-valid="null" data-bv-feedbackicons-invalid="null" data-bv-feedbackicons-validating="null" required id="tosCheck"> By placing an
       order with us, you agree to our full <a class="footer-link" href="javascript:void(0);" onclick="javascript:openNewWindow('terms.php', 'modal');">Terms and Conditions</a> and the enrollment our monthly auto-ship program, where you will immediately
-      be billed the shipping and handling amount of <span [innerText]="echos.price"></span> . We will then immediately ship you your first bottle of <span [innerText]="echos.corpName"></span>. In 18 days ( approximately 4 days for shipping and 14 days
-      to try the product ), your credit card will be automatically charged the full retail price of <span [innerText]="echos.price"></span> starting 45 days after you trial has been expired you will be shipped a recurring supply of <span [innerText]="echos.productName"></span>      every 30 days and will be charged <span [innerText]="echos.price"></span> for the total amount of <span [innerText]="echos.price"></span> for each recurring product that is shipped to you until you cancel. If our product is not right for you, simply
-      call <span [innerText]="echos.phone"></span> or contact us via email
-      <span [innerText]="echos.email"></span> to cancel your membership and owe nothing more.
+      be billed the shipping and handling amount of ${{ trialPrice }} . We will then immediately ship you your first bottle of {{ productName }}. In 18 days ( approximately 4 days for shipping and 14 days to try the product ), your credit card will be
+      automatically charged the full retail price of ${{ rebillPrice }} starting 45 days after you trial has been expired you will be shipped a recurring supply of {{ productName }} every 30 days and will be charged ${{ rebillPrice }} + ${{ trialPrice
+      }} for the total amount of ${{ total }} for each recurring product that is shipped to you until you cancel. If our product is not right for you, simply call {{ phone }} or contact us via email {{ email }} to cancel your membership and owe nothing
+      more.
     </div>
   </div>
   <div class="btn-container">
-    <button id="submit-btn" type="submit" name="sub-btn" class="btn button" routerLink="/thankyou" routerLinkActive="active">Claim My Trial</button>
+    <button id="submit-btn" type="submit" name="sub-btn" class="btn button" routerLink="/thankyou" [disabled]="!f2.valid">Claim My Trial</button>
   </div>
 
 </form>

@@ -3,3 +3,11 @@
   max-height: 420px;
   overflow-y: auto;
 }
+
+button.btn {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: .5em 2em;
+  font-size: 1em;
+  transition: .5s;
+}

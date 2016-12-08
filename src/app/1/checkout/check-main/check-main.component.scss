@@ -1,14 +1,16 @@
+@import "../../variables.scss";
+
 .table-section {
-  background-color: #f9f9f9;
+  background-color: $table-background-color;
 
   .col-md-5 {
-    background-color: #fff;
+    background-color: $form-background-color;
     padding: 2em 3em;
     margin: 1em;
 
     .table {
       strong {
-        color: #333;
+        color: $table-font-color;
         font-size: 1.5em;
         display: inline-block;
       }

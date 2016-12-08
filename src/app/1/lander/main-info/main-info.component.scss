@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 $assetPath : "../../../assets/images/";
 
 header {
@@ -6,7 +8,7 @@ header {
   background-repeat: no-repeat;
 
   h1, li {
-    color: #fff;
+    color: $main-info-header-color;
     list-style-type: disc;
     padding: 1.25em;
     transition: .5s;
@@ -52,7 +54,7 @@ header {
 
   // Form field in header
   .col-md-5 {
-    background-color: #fff;
+    background-color: $form-background-color;
     padding: 4em;
     margin: 6em 0;
     transition: 1s;

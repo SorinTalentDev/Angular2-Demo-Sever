@@ -1,6 +1,8 @@
+@import "../../variables.scss";
+
 header {
   text-align: left;
-  background-color: #333;
+  background-color: $header-background-color;
 
   img {
     width: 100%;

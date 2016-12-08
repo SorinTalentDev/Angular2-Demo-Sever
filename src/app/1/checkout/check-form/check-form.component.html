@@ -3,13 +3,13 @@
   <div class="checkout-form-image cards-image"><img class="form-cc" src="../../../../assets/images/cc.png" alt="Credit cards"></div>
 
   <div id="billshipcheck" class="billshipsame">
-    <input class="checkbox" type="checkbox" style="display:inline;" id="billShipSame" class="form-control" name="billship" checked>
+    <input class="checkbox" type="checkbox" style="display:inline;" id="billShipSame" class="form-control" name="billship" (change)="toggleHiddenBilling()" [checked]="hideBilling" >
     <label for='billShipSame'>
           Billing Address same as Shipping
         </label>
   </div>
 
-  <div id="hiddenbilling">
+  <div id="hiddenbilling" [hidden]="hideBilling">
     <div class="form-group">
       <label for="billaddress">Address</label>
       <input type="text" class="form-control" id="billaddress" pattern="" minlength="4" name="address" placeholder="Address" oninvalid="this.setCustomValidity('Please Enter Your Full Address')" onchange="this.setCustomValidity('')" required ngModel>

@@ -4,14 +4,11 @@
 ** forms, elements, fonts, etc. that will be used across the entire site.
 **
 */
+@import "app/1/variables.scss";
 
 // Elements //
 
 // Forms
-// form input prompt colors
-$error:  #b60000;  /* Red */
-$valid: #42A948; /* green */
-
 .checkbox input[type=checkbox] {
   margin-right: 1em;
   margin-left: 0;
@@ -44,6 +41,15 @@ button.btn {
     background-color: #830404;
     transition: .5s;
     color: #fff;
+  }
+}
+
+// Footer
+footer {
+  padding: 1em 25em;
+
+  .footer-company-motto,.footer-links, .footer-company-name {
+    text-align: center;
   }
 }
 

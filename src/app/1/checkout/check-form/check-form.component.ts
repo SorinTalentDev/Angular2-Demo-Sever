@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { GlobalDirective } from '../../../global.directive';
 import { NgForm } from "@angular/forms";
 
@@ -7,11 +7,10 @@ import { NgForm } from "@angular/forms";
   templateUrl: './check-form.component.html',
   styleUrls: ['./check-form.component.scss']
 })
-export class CheckFormComponent implements OnInit {
+export class CheckFormComponent {
+  public hideBilling = true;
 
-  constructor (public echos: GlobalDirective) {}
-
-  ngOnInit() {
+  public toggleHiddenBilling() {
+    this.hideBilling = !this.hideBilling;
   }
-
 }

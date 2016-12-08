@@ -1,10 +1,40 @@
+@import "../../variables.scss";
+
 .table-section {
-  background-color: #f9f9f9;
+  background-color: $table-background-color;
 
   .col-md-5 {
-    background-color: #fff;
+    background-color: $form-background-color;
     padding: 2em 3em;
     margin: 1em;
+
+    .table {
+      strong {
+        color: $table-font-color;
+        font-size: 1.5em;
+        display: inline-block;
+      }
+
+      #total {
+        font-size: 1.5em;
+      }
+
+      .op_price {
+        float: right;
+      }
+
+      .columns1 {
+        padding: 1em 0;
+
+        &:first-of-type{
+          margin-top: 2em;
+        }
+
+        &:nth-child(1) {
+          padding: .5em 0;
+        }
+      }
+    }
 
     .tos {
       font-size: 12px;

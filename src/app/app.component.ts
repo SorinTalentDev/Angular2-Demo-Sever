@@ -8,7 +8,7 @@ import { GlobalDirective } from './global.directive';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss', '../styles.scss']
+  styleUrls: ['./app.component.scss']
 })
 
 export class AppComponent {

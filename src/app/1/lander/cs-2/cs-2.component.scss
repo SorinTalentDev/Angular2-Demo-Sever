@@ -8,20 +8,6 @@
     font-size: 1.5em;
   }
 
-  button.btn {
-    background-color: #b60000;
-    color: #fff;
-    padding: 1em 4em;
-    font-size: 2em;
-    transition: .5s;
-
-    &:hover {
-      background-color: #830404;
-      transition: .5s;
-      color: #fff;
-    }
-  }
-
   .col-md-6 {
     img {
       width: 100%;
@@ -41,3 +27,18 @@
     border-color: #fff transparent transparent;
   }
 } //.second_section
+
+// Buttons
+button.btn {
+  background-color: #b60000;
+  color: #fff;
+  padding: 1em 4em;
+  font-size: 2em;
+  transition: .5s;
+
+  &:hover {
+    background-color: #830404;
+    transition: .5s;
+    color: #fff;
+  }
+}

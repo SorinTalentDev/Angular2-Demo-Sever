@@ -6,6 +6,34 @@
     padding: 2em 3em;
     margin: 1em;
 
+    .table {
+      strong {
+        color: #333;
+        font-size: 1.5em;
+        display: inline-block;
+      }
+
+      #total {
+        font-size: 1.5em;
+      }
+
+      .op_price {
+        float: right;
+      }
+
+      .columns1 {
+        padding: 1em 0;
+
+        &:first-of-type{
+          margin-top: 2em;
+        }
+
+        &:nth-child(1) {
+          padding: .5em 0;
+        }
+      }
+    }
+
     .tos {
       font-size: 12px;
     }

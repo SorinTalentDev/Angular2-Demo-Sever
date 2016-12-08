@@ -1,2 +1,2 @@
-/* You can add global styles to this file, and also import other style files */
-@import url('app/styles.scss');
+@import url('app/1/_variables.scss');
+@import url('app/1/_styles.scss');

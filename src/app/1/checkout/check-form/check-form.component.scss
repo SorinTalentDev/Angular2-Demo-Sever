@@ -1,14 +1,52 @@
+// form input prompt colors
+$error:  #b60000;  /* Red */
+$valid: #42A948; /* green */
+
+// Buttons
+$button-background-color: #b60000;
+$button-background-color-hover: #830404;
+
 // Buttons
 button.btn {
-  background-color: #b60000;
+  background-color: $button-background-color;
   color: #fff;
   padding: 1em 4em;
   font-size: 2em;
   transition: .5s;
 
   &:hover {
-    background-color: #830404;
+    background-color: $button-background-color-hover;
     transition: .5s;
     color: #fff;
+  }
+}
+
+form {
+  img {
+    padding: 1em 0;
+  }
+
+  .checkbox input[type=checkbox] {
+    margin-right: 1em;
+    margin-left: 0;
+    position: relative;
+  }
+
+  #billshipcheck {
+    margin: 2em 0;
+
+    input {
+      width: 5%;
+      height: 15px;
+    }
+  }
+
+  .ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid $valid;
+  }
+
+  .ng-invalid {
+    box-shadow: none;
+    border-left: 5px solid $error;
   }
 }

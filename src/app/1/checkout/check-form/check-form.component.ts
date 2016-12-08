@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalDirective } from '../../../global.directive';
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: 'app-check-form',

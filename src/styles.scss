@@ -7,6 +7,9 @@
 @import "app/1/variables.scss";
 
 // Elements //
+a:hover {
+  cursor: pointer;
+}
 
 // Forms
 .checkbox input[type=checkbox] {

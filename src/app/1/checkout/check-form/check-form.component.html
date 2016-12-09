@@ -1,9 +1,9 @@
 <!-- Form start -->
-<form id="index-form" #checkForm="ngForm" (ngSubmit)="onSubmit(checkForm.value)">
+<form id="index-form" [formGroup]="checkForm" (ngSubmit)="onSubmit(checkForm.value)">
   <div class="checkout-form-image cards-image"><img class="form-cc" src="../../../../assets/images/cc.png" alt="Credit cards"></div>
 
   <div id="billshipcheck" class="billshipsame">
-    <input class="checkbox" type="checkbox" style="display:inline;" id="billShipSame" class="form-control" name="billship" (change)="toggleHiddenBilling()" [checked]="hideBilling" >
+    <input class="checkbox" type="checkbox" id="billShipSame" class="form-control" name="billship" (change)="toggleHiddenBilling()" [checked]="hideBilling" >
     <label for='billShipSame'>
           Billing Address same as Shipping
         </label>
@@ -12,15 +12,15 @@
   <div id="hiddenbilling" [hidden]="hideBilling">
     <div class="form-group">
       <label for="billaddress">Address</label>
-      <input type="text" class="form-control" id="billaddress" pattern="" minlength="4" name="address" placeholder="Address" oninvalid="this.setCustomValidity('Please Enter Your Full Address')" onchange="this.setCustomValidity('')" required ngModel>
+      <input type="text" class="form-control" id="billaddress" pattern="" name="billaddress" placeholder="Address" oninvalid="this.setCustomValidity('Please Enter Your Full Address')" [formControl]="checkForm.controls['billaddress']" required ngModel>
     </div>
     <div class="form-group">
       <label for="billcity">City</label>
-      <input type="text" class="form-control" id="billcity" pattern="" minlength="4" name="billcity" placeholder="City" oninvalid="this.setCustomValidity('Please Enter Your City')" onchange="this.setCustomValidity('')" required ngModel>
+      <input type="text" class="form-control" id="billcity" pattern="" minlength="4" name="billcity" placeholder="City" oninvalid="this.setCustomValidity('Please Enter Your City')" onchange="this.setCustomValidity('')" [formControl]="checkForm.controls['billcity']" required ngModel>
     </div>
     <div class="form-group">
       <label for="billstate">State</label>
-      <select class="form-control" id="billstate" required name="billstate" ngModel>
+      <select class="form-control" id="billstate" required name="billstate" [formControl]="checkForm.controls['billstate']" ngModel>
         <!-- TODO: Set Data binding *ngFor command  -->
         <option value="">Select State</option>
         <option value="AL">Alabama</option>
@@ -78,7 +78,7 @@
     </div>
     <div class="form-group">
       <label for="billcountry">Country</label>
-      <select class="form-control" required name="billcountry" ngModel>
+      <select class="form-control" required name="billcountry" [formControl]="checkForm.controls['billcountry']" ngModel>
         <!-- TODO: Set Data binding *ngFor command  -->
               <option value="">Select Country</option>
               <option value="US">United States</option>
@@ -87,18 +87,18 @@
     <div class="form-group">
       <label for="billzip">Zip</label>
       <input type="tel" name="billzip" id="billzip" placeholder="Zip Code" class="form-control" maxlength="5" minlength="5" required pattern="([1-9])+(?:-?\d){4,}" oninvalid="this.setCustomValidity('Please Your 5 Digit zip')" onchange="this.setCustomValidity('')"
-          ngModel>
+          [formControl]="checkForm.controls['billzip']" ngModel>
     </div>
   </div>
   <label>Credit Card:</label>
   <div class="form-group">
-    <input type="num" class="form-control ignore" id="ccnumber" name="ccnumber" placeholder="Card Number" required maxlength="16" minlength="15" title="Please enter a valid credit card" ngModel>
+    <input type="num" class="form-control ignore" id="ccnumber" name="ccnumber" placeholder="Card Number" required maxlength="16" minlength="15" title="Please enter a valid credit card" [formControl]="checkForm.controls['ccnumber']" ngModel>
   </div>
 
   <label>Expiration Date:</label>
   <div class="form-group">
     <label for="cardExpMonth">Month</label>
-    <select name="cardExpMonth" class="form-control" id="cardExpMonth" ngModel>
+    <select name="cardExpMonth" class="form-control" id="cardExpMonth" [formControl]="checkForm.controls['cardExpMonth']" ngModel>
       <option value="1" selected>1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -116,7 +116,7 @@
   </div>
   <div class="form-group">
     <label for="cardExpYear">Year</label>
-    <select name="cardExpYear" class="form-control" id="cardExpYear" ngModel>
+    <select name="cardExpYear" class="form-control" id="cardExpYear" [formControl]="checkForm.controls['cardExpYear']" ngModel>
       <option value="2016" selected>2016</option>
       <option value="2017">2017</option>
       <option value="2018">2018</option>
@@ -130,13 +130,13 @@
 
   <label>CVV:</label>
   <div class="form-group">
-    <input class="form-control ignore" type="num" id="cvvnumber" name="cvvnumber" placeholder="CVV" required maxlength="3" minlength="3" title="Please enter a valid credit card" ngModel>
+    <input class="form-control ignore" type="num" id="cvvnumber" name="cvvnumber" placeholder="CVV" required maxlength="3" minlength="3" title="Please enter a valid credit card" [formControl]="checkForm.controls['cvvnumber']" ngModel>
   </div>
 
   <div style="clear:both;"></div>
   <div class="form-group">
     <div class="tos">
-      <input class="checkbox ignore" style="display:inline;" type="checkbox" name="confirm" required data-bv-feedbackicons-valid="null" data-bv-feedbackicons-invalid="null" data-bv-feedbackicons-validating="null" required id="tosCheck" ngModel> By placing
+      <input class="checkbox ignore" style="display:inline;" type="checkbox" name="confirm" required data-bv-feedbackicons-valid="null" data-bv-feedbackicons-invalid="null" data-bv-feedbackicons-validating="null" required id="tosCheck" [formControl]="checkForm.controls['confirm']" ngModel> By placing
       an order with us, you agree to our full <a class="footer-link" href="javascript:void(0);" onclick="javascript:openNewWindow('terms.php', 'modal');">Terms and Conditions</a> and the enrollment our monthly auto-ship program, where you will immediately
       be billed the shipping and handling amount of ${{ trialPrice }} . We will then immediately ship you your first bottle of {{ productName }}. In 18 days ( approximately 4 days for shipping and 14 days to try the product ), your credit card will be
       automatically charged the full retail price of ${{ rebillPrice }} starting 45 days after you trial has been expired you will be shipped a recurring supply of {{ productName }} every 30 days and will be charged ${{ rebillPrice }} + ${{ trialPrice

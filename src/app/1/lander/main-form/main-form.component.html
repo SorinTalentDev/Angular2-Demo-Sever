@@ -1,5 +1,5 @@
 <h3>Claim your trial today!</h3>
-<form id="index-form" #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+<form id="index-form" #mainForm="ngForm" (ngSubmit)="onSubmit(mainForm.value)">
   <!-- Index SHipping Form, initial gathering of data -->
   <!-- TODO: Set two way databinding for form submission -->
   <div>
@@ -103,6 +103,6 @@
         [innerText]="echos.email"></span> to cancel your membership and owe nothing more.
   </div>
   <div class="btn-container">
-    <button class="btn" type="submit" routerLink="/checkout" [disabled]="!f.valid">Order Now</button>
+    <button class="btn" type="submit" routerLink="/checkout" [disabled]="!mainForm.valid">Order Now</button>
   </div>
 </form>

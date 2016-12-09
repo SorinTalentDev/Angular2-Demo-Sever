@@ -130,7 +130,7 @@
 
   <label>CVV:</label>
   <div class="form-group">
-    <input class="form-control ignore" type="num" id="cvvnumber" name="cvvnumber" placeholder="CVV" required maxlength="3" minlength="3" title="Please enter a valid credit card" [formControl]="checkForm.controls['cvvnumber']" ngModel>
+    <input class="form-control ignore" type="num" id="cvvnumber" name="cvvnumber" placeholder="CVV" minlength="3" maxlength="4" title="Please enter a valid credit card" [formControl]="checkForm.controls['cvvnumber']" ngModel>
   </div>
 
   <div style="clear:both;"></div>

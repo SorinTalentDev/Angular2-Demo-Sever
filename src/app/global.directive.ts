@@ -1,5 +1,5 @@
-import { Directive } from '@angular/core';
-import { Injectable } from '@angular/core';
+import { Directive, Injectable } from '@angular/core';
+
 
 @Directive({
   selector: '[appGlobal]'

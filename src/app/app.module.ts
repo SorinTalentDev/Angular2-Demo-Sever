@@ -37,8 +37,10 @@ import { FooterComponent } from './1/footer/footer.component';
 // Modal
 import { ModalComponent } from './1/footer/modal/modal.component';
 
-
+// Navigation-Routing
 import { routing } from './app.routing';
+
+// Global Variables
 import { GlobalDirective } from './global.directive';
 
 
